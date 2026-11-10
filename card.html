@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Digital card of Stephane Morcos Douaihy." />
+  <meta name="theme-color" content="#f4f1eb" />
+  <title>Stephane Morcos Douaihy — E-Card</title>
+  <style>
+    :root{
+      --bg:#f4f1eb; --card:#fbfaf7; --text:#1f1f1d; --muted:#716b63;
+      --line:rgba(31,31,29,.12); --accent:#7e2336;
+      --serif: Georgia,"Times New Roman",serif;
+      --sans: Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%}
+    body{
+      min-height:100svh; display:grid; place-items:center; padding:18px;
+      background:var(--bg); color:var(--text); font-family:var(--sans);
+      -webkit-font-smoothing:antialiased;
+    }
+    .card{
+      width:min(372px,100%); background:var(--card); border:1px solid var(--line);
+      border-radius:20px; padding:22px; box-shadow:0 12px 32px rgba(28,24,20,.075);
+    }
+    .top{display:flex;align-items:center;gap:15px}
+    .photo{width:62px;height:62px;flex:0 0 62px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#ddd}
+    .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+    .identity{min-width:0}
+    h1{margin:0;font:600 27px/.95 var(--serif);letter-spacing:-.025em}
+    .role{margin:7px 0 0;color:var(--muted);font-size:10.5px;line-height:1.45}
+    .divider{height:1px;background:var(--line);margin:18px 0 14px}
+    .action{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      padding:11px 13px;border:1px solid var(--line);border-radius:13px;
+      color:var(--text);text-decoration:none;font-size:11.5px;font-weight:600;
+      transition:transform .18s ease,border-color .18s ease,background .18s ease;
+    }
+    .action:hover{transform:translateY(-1px);border-color:rgba(31,31,29,.28);background:#fff}
+    .action .left{display:flex;align-items:center;gap:9px}
+    .action svg{width:16px;height:16px;fill:currentColor}
+    .institution{margin:9px 0 0;color:var(--muted);font-size:9px;line-height:1.4;letter-spacing:.01em}
+    .actions{display:grid;gap:8px}
+    .arrow{color:var(--accent);font-size:13px}
+    @media(max-width:420px){
+      body{padding:12px}.card{padding:19px;border-radius:18px}.photo{width:58px;height:58px;flex-basis:58px}h1{font-size:25px}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" aria-label="Digital business card for Stephane Morcos Douaihy">
+    <div class="top">
+      <div class="photo"><img src="assets/profile.webp" alt="Portrait of Stephane Morcos Douaihy" /></div>
+      <div class="identity">
+        <h1>Stephane<br>Morcos Douaihy</h1>
+        <p class="role">Engineer · Doctoral Researcher in Computer Science</p>
+        <p class="institution">Cotutelle PhD · Stevens Institute of Technology × Centrale Nantes / LS2N</p>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="actions">
+      <a class="action" href="mailto:smorcosd@stevens.edu">
+        <span class="left">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+          <span>Email</span>
+        </span>
+        <span class="arrow">↗</span>
+      </a>
+      <a class="action" href="https://www.linkedin.com/in/stephane-md" target="_blank" rel="noreferrer">
+        <span class="left">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.4H3.2V21h3.3V8.4ZM4.85 3A1.92 1.92 0 1 0 4.86 6.84 1.92 1.92 0 0 0 4.85 3ZM21 13.78c0-3.8-2.03-5.57-4.73-5.57-2.18 0-3.16 1.2-3.7 2.04V8.4H9.26c.04 1.23 0 12.6 0 12.6h3.31v-7.04c0-.38.03-.75.14-1.02.24-.75.78-1.52 1.7-1.52 1.2 0 1.68.92 1.68 2.26V21H21v-7.22Z"/></svg>
+          <span>LinkedIn</span>
+        </span>
+        <span class="arrow">↗</span>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
